@@ -75,13 +75,18 @@ const computerScoreSpanElement = document.getElementById("computer-score");
 const roundResultsMsg = document.getElementById("results-msg");
 
 function showResults(userOption) {
-  const roundResult = getRoundResults(userOption);
-  console.log(roundResult);
+  // const roundResult = getRoundResults(userOption);
+  // console.log(roundResult);
 
+  // computerScoreSpanElement.innerText = computerScore;
+  // playerScoreSpanElement.innerText = playerScore;
+  // //console.log(playerScore)
+  // roundResultsMsg.innerText = getRoundResults(userOption);
+
+  // ### Fcc correction
+  roundResultsMsg.innerText = getRoundResults(userOption);
   computerScoreSpanElement.innerText = computerScore;
   playerScoreSpanElement.innerText = playerScore;
-  //console.log(playerScore)
-  roundResultsMsg.innerText = getRoundResults(userOption);
 };
 
 showResults("Rock");
