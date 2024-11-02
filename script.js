@@ -106,7 +106,17 @@ function showResults(userOption) {
       optionsContainer.style.display = "none";
     }
   }
-};
+// };
+// showResults("Rock");
 
-showResults("Rock");
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreSpanElement.innerText = 0;
+  computerScoreSpanElement.innerText = 0;
+  resetGameBtn.style.display = "none";
+  optionsContainer.style.display = "block";
+  winnerMsgElement.innerText = "";
+  roundResultsMsg.innerText = "";
+};
 
