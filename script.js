@@ -91,10 +91,20 @@ function showResults(userOption) {
   computerScoreSpanElement.innerText = computerScore;
   playerScoreSpanElement.innerText = playerScore;
 
-  if(playerScore === 3 || computerScore === 3) {
-    winnerMsgElement.innerText = playerScore === 3 ? "Player has won the game!" : "Computer has won the game!";
-    optionsContainer.style.display = "none";
-    resetGameBtn.style.display = "block";
+  // if(playerScore === 3 || computerScore === 3) {
+  //   winnerMsgElement.innerText = playerScore === 3 ? "Player has won the game!" : "Computer has won the game!";
+  //   optionsContainer.style.display = "none";
+  //   resetGameBtn.style.display = "block";
+
+    // Fcc correction
+    if (playerScore === 3 || computerScore === 3) {
+      winnerMsgElement.innerText = `${
+        playerScore === 3 ? "Player" : "Computer"
+      } has won the game!`;
+  
+      resetGameBtn.style.display = "block";
+      optionsContainer.style.display = "none";
+    }
   }
 };
 
